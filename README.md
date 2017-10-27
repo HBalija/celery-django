@@ -30,7 +30,7 @@ Run development server:
 
 Run celery (in separate environment):
 
-    celery -A cellery_django worker -l info
+    celery -A celery_django worker -l info
 
 Point your browser to:
 
