@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .forms import ContactForm
-from .utils import send_contact_email
+from .tasks import send_contact_email
 
 
 def contact(request):
@@ -11,7 +11,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            send_contact_email(data)
+            send_contact_email.delay(data)
             return redirect('contact')
 
     return render(request, 'index.html', {

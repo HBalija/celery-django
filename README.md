@@ -1,7 +1,7 @@
 # Celery django
 
 Simple implementation of celery shared task with django framework. Every step
-of celery implementation (from a functional mail sending via django)
+of celery implementation (from a point of functional mail sending via django)
 is shown in "Implement celery" commit.
 
 ### Quickstart
